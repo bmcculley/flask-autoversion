@@ -8,7 +8,7 @@ from flaskext.autoversion import Autoversion
 class AutoversionTestCase(unittest.TestCase):
 
 	def setUp(self):
-		app = Flask(__name__, static_url_path='/tests/static/')
+		app = Flask(__name__)
 		app.autoversion = True
 		self.av = Autoversion(app)
 		self.app = app

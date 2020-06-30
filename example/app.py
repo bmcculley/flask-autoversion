@@ -3,7 +3,7 @@ from flaskext.autoversion import Autoversion
 
 app = Flask(__name__)
 app.autoversion = True
-av = Autoversion(app)
+Autoversion(app)
 
 @app.route('/')
 def hello_world():

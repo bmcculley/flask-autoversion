@@ -22,7 +22,8 @@ class Autoversion(object):
 		if ( hasattr(self.autoversion_app_context, 'autoversion') and 
 				self.autoversion_app_context.autoversion ):
 			fullpath = os.path.join(
-					'.'+self.autoversion_app_context.static_url_path, 
+					self.autoversion_app_context.root_path + \
+					self.autoversion_app_context.static_url_path, 
 					filename)
 			try:
 				timestamp = str(os.path.getmtime(fullpath))
