@@ -35,6 +35,7 @@ setup(
 	author_email='fva@pypi.e42.xyz',
 	description='Add query parameters to static file paths.',
 	long_description=fread('README.md'),
+	long_description_content_type='text/markdown',
 	packages=[
 		'flaskext',
 		'flaskext.autoversion',
