@@ -28,7 +28,7 @@ def fread(filepath):
 
 setup(
 	name='Flask-Autoversion',
-	version='0.1.0',
+	version='0.2.0',
 	url='http://github.com/bmcculley/flask-autoversion',
 	license='BSD',
 	author='bmcculley',
