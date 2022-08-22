@@ -18,7 +18,7 @@ class Autoversion(object):
 		app.jinja_env.globals.update(
 				static_autoversion=self.static_autoversion)
 
-	def static_autoversion(self, filename):
+	def static_autoversion(self, filename, endpoint='static'):
 		if ( hasattr(self.autoversion_app_context, 'autoversion') and 
 				self.autoversion_app_context.autoversion ):
 			fullpath = os.path.join(
@@ -29,6 +29,6 @@ class Autoversion(object):
 				timestamp = str(os.path.getmtime(fullpath))
 			except OSError:
 				return url_for('static', filename=filename)
-			return url_for('static', filename=filename, ts=timestamp)
+			return url_for(endpoint, filename=filename, ts=timestamp)
 		else:
-			return url_for('static', filename=filename)
+			return url_for(endpoint, filename=filename)
