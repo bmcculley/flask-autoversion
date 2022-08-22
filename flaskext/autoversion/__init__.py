@@ -28,7 +28,7 @@ class Autoversion(object):
 			try:
 				timestamp = str(os.path.getmtime(fullpath))
 			except OSError:
-				return url_for('static', filename=filename)
+				return url_for(endpoint, filename=filename)
 			return url_for(endpoint, filename=filename, ts=timestamp)
 		else:
 			return url_for(endpoint, filename=filename)
